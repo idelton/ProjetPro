@@ -18,10 +18,14 @@ console.log(greet(' paul'));
   de noms et retourne un tableau de salutations pour
   chaque nom. Par exemple, ['Alice', 'Bob'] devrait
   retourner ['Hello, Alice!', 'Hello, Bob!'].*/
-
 const noms = ['idelton','arthur'];
 const bonjour = noms.map((nomss) => `hello ${nomss}`) 
 console.log(bonjour)
+
+//Ecrire une fonction qui renvoie les nombre paire 
+const scores = [85, 92, 73, 98, 80];
+const eventScore = scores.filter(num => num % 2 ===0)
+console.log(eventScore)
 
 
 
