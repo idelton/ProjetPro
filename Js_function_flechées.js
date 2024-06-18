@@ -27,6 +27,15 @@ const scores = [85, 92, 73, 98, 80];
 const eventScore = scores.filter(num => num % 2 ===0)
 console.log(eventScore)
 
+//Ecrire une fonction qui supprimer les doublont
+const guestList = ["Alice", "Bob", "Charlie", "Alice","Bob",];
+const supprimerDoublont = [... new Set(guestList)]
+console.log(supprimerDoublont)
+
+//conditions abreger if/else
+const age = 11;
+const resultat = age >=18 ? "tu peut passer " : "tu n'as pas l'age qu'il faut"
+console.log(resultat)
 
 
 
