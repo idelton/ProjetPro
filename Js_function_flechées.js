@@ -37,6 +37,10 @@ const age = 11;
 const resultat = age >=18 ? "tu peut passer " : "tu n'as pas l'age qu'il faut"
 console.log(resultat)
 
+//reverse
+const reversedStr = str.split('').reverse().join('');
+console.log(reversedStr)
+
 
 
 
