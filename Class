@@ -1,0 +1,31 @@
+
+//Exercice 1: Utilisation de this dans un objet simple
+//Objectif: Créer un objet voiture avec une propriété marque
+//et une méthode afficherMarque qui affiche la marque de
+//la voiture en utilisant this.
+const voiture = {
+    marque : 'peugeot', 
+    afficherMarque: function(){
+    const laMarque = ()=> {
+        console.log(this.marque)
+    }   
+    laMarque()
+        }
+}
+voiture.afficherMarque()
+
+//Exercice 2: Utilisation de this dans une classe
+//Objectif: Créer une classe Animal avec une propriété
+//nom et une méthode parler qui affiche un message
+//incluant le nom de l'animal en utilisant this.
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+}
+
+const person1 = new Person('Asabeneh', 'Yetayeh')
+
+console.log(person1)
+
