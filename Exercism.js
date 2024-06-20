@@ -58,3 +58,21 @@ export function preparationTimeInMinutes(numberOfLayers) {
 export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
  return preparationTimeInMinutes(numberOfLayers) + actualMinutesInOven
 }
+
+// Poetry Club Door Policy
+
+export function frontDoorResponse(line) {
+  return line[0]
+}
+export function frontDoorPassword(word) {
+
+ return (word[0].toUpperCase() + word.slice(1).toLowerCase()); 
+}
+export function backDoorResponse(line) {
+  return line.trim().slice(-1);
+}
+export function backDoorPassword(word) {
+ return (word[0].toUpperCase() + word.slice(1).toLowerCase()) + ', please';
+}
+
+
