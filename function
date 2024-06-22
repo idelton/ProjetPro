@@ -7,3 +7,13 @@ function concatenation(arg1,arg2) {
     return arg1 + arg2
 }
 concatenation("Steven","Hanse")
+
+
+
+/*Crée une fonction qui s'appelle somme(). Elle prendra deux arguments
+de type int (nombre entier). Elle devra retourner la somme des deux.
+Exemple : argument 1 = 5 Argument 2 = 5 ; Resultat : 10 */
+function somme(argument1, argument2){
+return argument1 * argument2
+}
+somme()
