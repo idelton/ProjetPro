@@ -1,0 +1,9 @@
+//Créer une fonction qui s'appelle concatenation(). 
+//Elle prendra deux arguments de type string (chaine de caractères).
+//Elle devra retourner la concatenation des deux.
+//Exemple : argument 1 = Steven et Argument 2 = Hanse => Resultat : StevenHanse
+
+function concatenation(arg1,arg2) {
+    return arg1 + arg2
+}
+concatenation("Steven","Hanse")
