@@ -34,9 +34,18 @@ const nombre = Math.max(nombre1,nombre2)
 }
 console.log(plusGrand(1,2))
 
-//le plus petit 
+//le plus petit de 2 argument
 function plusPetit(nombre1,nombre2){
     let nombre = Math.min(nombre1,nombre2)
     return nombre
 }
 console.log(plusPetit(9,5))
+
+//renvoie le plus petit Nombre de 3 argument
+function plusPetit(argument1,argument2,argument3){ 
+    const nombre =  [argument1,argument2,argument3]
+const nombres = Math.min(...nombre)
+return nombres
+}
+console.log(plusPetit(1,4,8))
+
