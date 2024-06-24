@@ -147,3 +147,39 @@ function capital(nom) {
 
 console.log(capital('Maroc'));
 
+
+/*
+Créer une fonction qui s'appelle listHTML(). Elle prendra deux arguments :
+Un string représentant le nom de la liste
+Un array représentant les élements de cette liste
+Elle devra retourner une liste HTML. Chaque element de cette 
+liste viendra du tableau passé en paramètre.
+Exemple : Paramètre : Titre : Capitale Liste :
+["Paris", "Berlin", "Moscou"] Résultat :
+<h3>Capitale</h3><ul><li>Paris</li><li>Berlin</li><li>Moscou</li></ul>
+Comme tu peux le voir il n'y a pas d'espace ni de retour à la ligne entre
+les élements de la liste. Pas d'espace non plus entre le titre et la liste.
+Si le titre est null et vide il faut que la fonction retourne null.
+Si l'array est vide, il faut que la fonction retourne null.*/
+function listHTML(string, arrays) {
+    arrays = ['Capitale', 'Paris', 'Berlin', 'Moscou'];
+    const tableuArray = arrays.length;
+    let text = "<ul>";
+    for (let i = 0; i < tableuArray; i++) {
+        text += "<li>" + arrays[i] + "</li>";
+    }
+    text += '</ul>';
+    return text;
+}
+console.log(listHTML()); 
+
+/*Créer une fonction qui s'appelle remplacerLesLettres().
+Elle prendra un argument de type string. Elle devra retourner
+cette même string mais en remplacant les e par des 3, les i par
+des 1 et les o par des 0 Exemple :*/
+function remplacerLesLettres(chaine) {
+    return chaine.replace(/e/g, '3')
+                 .replace(/i/g, '1')
+                 .replace(/o/g, '0');
+}
+console.log(remplacerLesLettres("Les cours de programmation Web sont trops cools")); 
