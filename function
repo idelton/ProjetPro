@@ -60,3 +60,57 @@ function premierElementTableau(){
  }
  console.log(premierElementTableau())
 
+// renvoie le dernier element du tableaux et si tableau vide renvoie null
+function dernierElementTableau(){
+    const tableaux =[1,2,3,4]
+    const dernierElement = tableaux.pop();
+    
+    if(tableaux.length === 0){
+        return null
+    }
+        return dernierElement
+}
+console.log(dernierElementTableau())
+
+//renvoie le nombre le plus grand sinon renvoie null
+function  plusGrand() {
+    const tableaux = [1,9,6,3,]
+    const grandNum =  Math.max(...tableaux)
+
+    if(grandNum.length === 0){
+        return null
+    }
+    return grandNum
+}
+console.log(plusGrand())
+
+//retourne le plus petit sinon null 
+function plusPetit(array){
+     if(array.length === 0 ){
+        return null
+    }
+   
+    const total = Math.min(...array) 
+    return total
+}
+console.log(plusPetit([]))
+
+/*
+Créer une fonction qui s'appelle verificationPassword().
+Elle prendra un argument de type string. Elle devra retourner
+un boolean qui vaut true si le password fait au moins 8 caractères
+et false si moins.
+*/
+function verficationPassword(argument){
+    if (typeof argument !== 'string') {
+        throw new  Error('L’argument doit être une chaîne de caractères');
+    }
+   
+    if(argument.length >=8){
+      return true
+    }
+    return false
+  } 
+  
+console.log(verficationPassword('dsgrhreh45'))
+
