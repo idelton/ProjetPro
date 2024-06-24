@@ -49,3 +49,14 @@ return nombres
 }
 console.log(plusPetit(1,4,8))
 
+//fonction qui renvoie un null si tableaux vide
+function premierElementTableau(){
+     const tableaux = []
+     if(tableaux.length === 0){ 
+         return null;
+     }
+    
+    return tableaux[0]
+ }
+ console.log(premierElementTableau())
+
