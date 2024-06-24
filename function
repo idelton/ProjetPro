@@ -114,3 +114,36 @@ function verficationPassword(argument){
   
 console.log(verficationPassword('dsgrhreh45'))
 
+/*
+Créer une fonction qui s'appelle capital(). 
+Elle prendra un argument de type string.
+Elle devra retourner le nom de la capitale 
+des pays suivants :
+*/
+function capital(nom) {
+    if (typeof nom !== 'string') {
+        throw new Error('Utiliser uniquement des chaînes de caractères');
+    }
+
+    switch (nom) {
+        case 'France':
+            return 'Paris';
+        case 'Allemagne':
+            return 'Berlin';
+        case 'Italie':
+            return 'Rome';
+        case 'Maroc':
+            return 'Rabat';
+        case 'Espagne':
+            return 'Madrid';
+        case 'Portugal':
+            return 'Lisbonne';
+        case 'Angleterre':
+            return 'Londres';
+        default:
+            return 'Capitale inconnue';
+    }
+}
+
+console.log(capital('Maroc'));
+
