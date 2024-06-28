@@ -17,3 +17,13 @@ console.log(condiments)
 //unstensils
 utensils[3] = "Spoon"
 console.log(utensils)
+
+//Push Methode
+const chores = ['wash dishes', 'do laundry', 'take out trash'];
+chores.push('item1','item2')
+console.log(chores)
+
+//Pop Methode 
+const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
+chores.pop(4)
+console.log(chores)
