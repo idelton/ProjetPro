@@ -1,0 +1,19 @@
+//Acces Element
+const famousSayings = ['Fortune favors the brave.',
+'A joke is a very serious thing.',
+'Where there is love there is life.'];
+const listItem = famousSayings[0]
+console.log(listItem)
+console.log(famousSayings[2])
+
+//let const acces
+let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+//condiments
+condiments[0] = "Mayo"
+console.log(condiments)
+condiments = ["Mayo"]
+console.log(condiments)
+//unstensils
+utensils[3] = "Spoon"
+console.log(utensils)
