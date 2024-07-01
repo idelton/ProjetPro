@@ -16,3 +16,62 @@ export default function HomePage() {
         </>
     );
 }
+
+//count
+import './HomePage.css';
+import { useState } from 'react';
+
+export default function HomePage() {
+    //count est la valeur  et le seter seCount
+    const [count, setCount] = useState(0);//passer une valeur iniital0
+
+    console.log('render')
+    
+    // functoin increment
+    const increment = () => {
+        // on dis setCount de prendre 
+        //la valeur de count et de lincrementer de 1
+        setCount(count +1)// 1
+        setCount(count +1)// 1
+        
+
+//function qui pend en para l'etaat actuel et
+// renvoie nouvelle etat 
+//qui recupere la valeur de count 
+//setCount((c) => c + 1) 
+//setCount((c) => c+ 1) 
+//setCount((c) => c+ 1) 
+// +3 car il recupere letat a chaque fois 
+
+    }
+
+//incrementer nom prenom anne 
+import './HomePage.css';
+import { useState } from 'react';
+
+export default function HomePage() {
+    //count est la valeur  et le seter seCount
+    const [person, setPerson] = useState({
+        prenom: 'John',
+        nom:'adelein',
+        age: 18
+    });//passer une valeur iniital0
+
+    console.log('render')
+    
+    // functoin increment
+    const increment = () => {
+     setPerson  ({...person, age : person.age + 1})
+    };
+
+
+
+    return(
+        <>  
+            <h1> Page d'accueil </h1>
+            <p>Nom et age de person: {person.prenom} : {person.age}</p>
+            <button onClick={increment}>incrementer</button>
+
+        </>
+    )
+}
