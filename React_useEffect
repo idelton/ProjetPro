@@ -1,0 +1,13 @@
+
+//clear interval
+  useEffect(() => {
+                console.log('useEeffect3')
+
+                const  timerId = setInterval(() => {
+                    console.log('coucou')
+                },1000)
+
+                return() =>   {
+                    clearInterval(timerId);
+                };
+                    },[])
