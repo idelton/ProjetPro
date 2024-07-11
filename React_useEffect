@@ -11,3 +11,88 @@
                     clearInterval(timerId);
                 };
                     },[])
+
+
+//todos.tsx 
+import axios from "axios";
+
+
+export async function getTodos() {
+//etape1
+try {      //appel de axios et la methode get et url entre ()
+    const { data } = await axios.get('https://jsonplaceholder.typicode.com/todos')
+    return data;
+} catch (error) {
+    console.log(error)
+    
+}
+}
+
+
+export async function getTodoId(id:number) {
+    //etape1
+    try {      //appel de axios un id en paticulier ()
+        const { data } = await axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        return data;
+    } catch (error) {
+        console.log(error)
+        
+    }
+    }
+
+//blogPage
+
+//3 cree tableau objet pour afficher liste todo 
+const [listTodo,setlistTodo] = useState<any[]>([]);
+
+//2 
+ useEffect(() => {
+  console.log('useEeffect')
+//2
+  async function  loadTodos(){
+    const todos =  await getTodos()
+    //4 setlsitTodo
+    setlistTodo(todos) 
+    console.log(todos)
+  }
+loadTodos()
+    },[])
+
+useEffect(() => {
+  console.log('useEeffect2')
+},[messagess,user])
+ 
+            async function submitMessage(id:any) {
+                setMessage('arthur')
+            }
+
+            async function getInfoTodo(id:any) {
+               const detailTodo =  await getTodoId(id)
+               console.log(detailTodo)
+            }  
+
+    return (
+        <> 
+        <form>
+            <h1>donner recuperer</h1>
+            <button onClick={submitMessage}>clikermoi</button>
+       {       // on a des data qui possede des doer inuqie on peut utiliser id pas obligation dutiliser lindex
+          listTodo.map((todo:any, ) => (
+            <div key={todo.id} onClick={() => getInfoTodo(todo.id)} >
+               -{todo.title} <br />
+
+            </div>
+          ))
+       }
+        <h1>Page Blog</h1>
+        <select name="category" id="category" >
+                    <option value="">Selectionne une categorie</option>
+                    <option value="front">front</option>
+                    <option value="back">back</option>
+                    <option value="fullstack">fullstack</option>
+                    <option value="other">Autres</option>
+                </select>
+                </form>
+        </>
+    )
+}
