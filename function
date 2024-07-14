@@ -1,3 +1,31 @@
+//permet de mettre  la valeur saisie en maj si cest en min et vise versa 
+<!DOCTYPE html> 
+<html> 
+<body> 
+  <input type="text" id="inputName" /> 
+  <button onclick="swapCase()">Swap Case</button> 
+  <span id="outputName"></span>
+
+  <script> 
+    function swapCase() {
+      const name = document.getElementById("inputName").value; 
+      const characters = name.split(""); 
+      const changedCharacters = characters.map(function(c) {
+        if (c === c.toLowerCase()) {
+          return c.toUpperCase(); 
+        } else {
+          return c.toLowerCase(); 
+        }
+      }); 
+      
+      const changedName = changedCharacters.join(""); 
+      document.getElementById("outputName").textContent = changedName; 
+    }
+  </script> 
+</body> 
+</html> 
+
+
 //Créer une fonction qui s'appelle concatenation(). 
 //Elle prendra deux arguments de type string (chaine de caractères).
 //Elle devra retourner la concatenation des deux.
