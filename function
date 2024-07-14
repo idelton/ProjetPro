@@ -201,3 +201,10 @@ newArr.pop()
 removeElement(concept)
 console.log(concept)
 
+//tab
+let yearArray = [2018, 2019, 2020, 2021, 2022];
+
+for(let i=0; i< yearArray.length;i++)
+{
+console.log(yearArray[i]); 
+}
