@@ -1,0 +1,20 @@
+import "./styles.css";
+import { useState } from "react";
+
+export default function App() {
+  const [statep1, setStatep1] = useState("Just React");
+  const [statep2,setStatep2] = useState("2020")
+
+  function changeContent() {
+    setStatep1("salut le step1");
+    setStatep2("1992");
+  }
+
+  return (
+    <>
+      <p>{statep1}</p>
+      <p>{statep2}</p>
+      <button onClick={changeContent}>Changer le contenu</button>
+    </>
+  );
+}
