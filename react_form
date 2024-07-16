@@ -1,0 +1,35 @@
+//form base
+
+import "./App.css";
+import { useState } from "react";
+
+export default function EnrolmentForm() {
+
+ const [firstName,setFirstName] = useState('')
+ const [lastName,setLastName] = useState('')
+ const [recevoirMessage,setRecevoirMessage] = useState('')
+
+ const handleEnvoyer = (event) => {
+    setRecevoirMessage(`bienvenu ${firstName} ${lastName}`)
+    event.preventDefault()
+ }
+
+  return (
+    <div>
+      <form className="enrolForm"  onSubmit={handleEnvoyer} >
+        <h1>Student Details</h1>
+        <label id="studentMsg" className="message">First name:</label>
+        <input type="text" name="fname" onChange={(event) => setFirstName(event.target.value)} />
+        <br/>
+        <br/>
+        <label id="studentMsg" className="message">Last name:</label>
+        <input type="text" name="lname" onChange={(event) => setLastName(event.target.value)}  />
+        <br/>
+        <br/>
+        <input  type="submit" value="Submit"/>
+        <br/>
+        <label id="studentMsg" className="message"> {recevoirMessage}</label>
+      </form>
+    </div>
+  )
+}
