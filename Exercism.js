@@ -179,4 +179,68 @@ export function parse(markdown) {
   }
 }
 
+import { AiOutlineFileAdd, AiOutlineSchedule, AiOutlineTeam, AiOutlineProject } from 'react-icons/ai';
+
+
+export default function ProfessionalHomePage() {
+ 
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-8">
+    <h1 className="text-3xl font-bold mb-8 text-center">Home page Particulier</h1>
+
+    <div className="mb-4">
+        <input
+          type="text"
+          className="w-full px-4 py-2 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Rechercher..."
+        />
+      </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Section Poster une nouvelle annonce */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-xl font-bold mb-4">Poster une nouvelle annonce</h2>
+        <button className="flex items-center text-blue-500 hover:underline">
+          <AiOutlineFileAdd className="mr-2" />
+          Poster une annonce
+        </button>
+      </div>
+
+      {/* Section Accès au planning */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-xl font-bold mb-4">Accès au planning</h2>
+        <button className="flex items-center text-blue-500 hover:underline">
+          <AiOutlineSchedule className="mr-2" />
+          Voir le planning
+        </button>
+      </div>
+
+      {/* Section Afficher les intervenants disponibles */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-xl font-bold mb-4">Afficher les intervenants disponibles</h2>
+        <button className="flex items-center text-blue-500 hover:underline">
+          <AiOutlineTeam className="mr-2" />
+          Voir les intervenants
+        </button>
+      </div>
+
+      {/* Section Gérer mes chantiers */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-xl font-bold mb-4">Gérer mes chantiers</h2>
+        <button className="flex items-center text-blue-500 hover:underline">
+          <AiOutlineProject className="mr-2" />
+          Gérer mes chantiers
+        </button>
+      </div>
+
+      {/* Section Calendrier ou Planning détaillé */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-xl font-bold mb-4">Calendrier détaillé</h2>
+        <p className="text-gray-600">Affichage détaillé des travaux programmés...</p>
+      </div>
+    </div>
+  </div>
+);
+}
+
 
