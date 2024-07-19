@@ -1,0 +1,9 @@
+function introduce() {
+  console.log(`Hello, my name is ${this.name}`);
+}
+
+const person = { name: 'Eve' };
+
+const boundIntroduce = introduce.bind(person);
+boundIntroduce(); 
+//// Logs "Hello, my name is Eve"
