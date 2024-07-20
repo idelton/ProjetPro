@@ -1,0 +1,23 @@
+//base
+export default function App() {
+  const list = 
+  [
+    {title: 'arthur',id:1},
+    {title: 'duvaut',id:2}
+
+  ]
+
+  const items =  list.map(lists =>
+    <li key={lists.id}>
+      {lists.title}
+  </li>
+  )
+  return (
+    <>
+
+    <h1>{items}</h1>
+
+    </>
+  )
+   
+}
