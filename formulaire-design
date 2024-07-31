@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    overflow: hidden; /* Assure que les coins arrondis sont appliqués */
+}
+
+.image {
+    flex-shrink: 0;
+}
+
+.image img {
+    width: 300px; /* Largeur de l'image */
+    height: 200px; /* Hauteur fixe pour maintenir le ratio */
+    object-fit: cover; /* Assure que l'image couvre la zone sans déformation */
+    border-radius: 10px 0 0 10px; /* Coins arrondis du côté gauche de l'image */
+}
+
+.separator {
+    width: 20px; /* Largeur de la séparation */
+    background-color: #e0e0e0; /* Couleur de la séparation */
+}
+
+.card {
+    padding: 20px;
+    width: 300px; /* Largeur du formulaire */
+    border-radius: 0 10px 10px 0; /* Coins arrondis du côté droit du formulaire */
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical; /* Permet à l'utilisateur de redimensionner verticalement */
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+    </style>
+
+    <div class="outer-container">
+        <div class="content">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1506748686214e9df14a0f7c2f5d4fba6a09db6e807?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Dunes de sable">
+            </div>
+            <div class="separator"></div>
+            <div class="card">
+                <h2>Formulaire de Contact</h2>
+                <form id="contactForm">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                    
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                    
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+      
+    <script src="script.js"></script>
+</body>
+</html>
